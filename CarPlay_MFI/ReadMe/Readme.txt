@@ -1,0 +1,3 @@
+STM32F10X系列：
+	主要用于USART与IIC总线从设备通信
+	MCU端为IIC总线上的主设备

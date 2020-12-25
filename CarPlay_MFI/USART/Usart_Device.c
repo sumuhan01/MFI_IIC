@@ -79,7 +79,8 @@ void USART1_IRQHandler(void)
                 if (usart_runtime.Usart_ReceCount < usart_runtime.Usart_ReceLength) {
                     usart_runtime.Usart_DataBuff[usart_runtime.Usart_ReceCount] = tempData;
                     usart_runtime.Usart_ReceCount++;
-                } else {
+                }
+                if (usart_runtime.Usart_ReceCount == usart_runtime.Usart_ReceLength) {
                     usart_runtime.Usart_ReceStop = 1;
                     usart_runtime.Usart_ReceCount = 0;
                 }
